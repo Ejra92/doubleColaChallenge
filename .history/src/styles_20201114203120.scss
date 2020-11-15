@@ -1,0 +1,14 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    height: 100%;
+
+    * {
+        margin: 0;
+    }
+
+    p, h1 {
+        text-align: center;
+    }
+}

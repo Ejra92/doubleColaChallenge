@@ -1,0 +1,12 @@
+.PersonsInQueue {
+    display: flex;
+
+    .Person {
+        width: 300px;
+        height: 300px;
+
+        img {
+            width: 90%;
+        }
+    }
+}

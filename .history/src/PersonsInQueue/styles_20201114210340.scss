@@ -1,0 +1,32 @@
+.PersonsInQueue {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .Person {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex: none;
+        width: 135px;
+        height: 155px;
+        background-color: #4A47EA;
+        padding-bottom: 2px;
+        color: #fff;
+
+        img {
+            margin-top: 3px;
+            width: 130px;
+            height: 130px;
+        }
+    }
+
+    .dispensador {
+        width: 150px;
+
+        img {
+            width: 100%;
+        }
+    }
+}

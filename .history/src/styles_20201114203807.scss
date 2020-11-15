@@ -1,0 +1,18 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100vh;
+
+    * {
+        margin: 0;
+    }
+
+    p, h1 {
+        text-align: center;
+    }
+
+    .PersonsInQueue, .ActionsTools {
+        flex: 1;
+    }
+}

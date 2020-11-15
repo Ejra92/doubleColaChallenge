@@ -1,0 +1,35 @@
+.ActionsTools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    input {
+        margin: 40px 0;
+        width: 100px;
+        padding: 10px;
+        border: none;
+        border-bottom: .5px solid rgba($color: #000000, $alpha: .5);
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    div {
+        button {
+            border: 1px solid transparent;
+            outline: none;
+            padding: 15px 32px;
+            margin: 0;
+            background: #4a47ea;
+            color: #fff;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+
+}

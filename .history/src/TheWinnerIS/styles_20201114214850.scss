@@ -1,0 +1,30 @@
+.TheWinnerIs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: -webkit-fill-available;
+    background-color: rgba(0,0,0,.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    -webkit-animation: fadeIn .5s;
+    animation: fadeIn .5s;
+    padding: 0 13px;
+    z-index: 100;
+    color: #fff;
+    font-weight: 900;
+    font-size: 20px;
+
+    img, p {
+        cursor: pointer;
+    }
+
+    img {
+        width: 500px;
+        height: 400px;
+        margin-bottom: 30px;
+    }
+}

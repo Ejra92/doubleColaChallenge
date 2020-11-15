@@ -1,0 +1,20 @@
+.PersonsInQueue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .Person {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex: none;
+        width: 150px;
+        height: 150px;
+
+        img {
+            width: 135px;
+            height: 110px;
+        }
+    }
+}

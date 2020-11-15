@@ -1,0 +1,17 @@
+.ActionsTools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    input {
+        width: 100px;
+        padding: 10px;
+        border: none;
+        border-bottom: .5px solid rgba($color: #000000, $alpha: .5);
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

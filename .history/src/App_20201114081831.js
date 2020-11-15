@@ -1,0 +1,72 @@
+import React, { useEffect, useState } from 'react'
+
+
+const theBigBangTeamQueue  = ['Sheldon', 'Leonard', 'Penny', 'Rajesh', 'Howard']
+
+const goTwoEnd = queue => {
+  const whosNextToTakeDoubleCola = queue.shift()
+
+  return queue = [...queue, whosNextToTakeDoubleCola, whosNextToTakeDoubleCola]
+}
+
+
+export default function App() {
+  const [stop, setStop] = useState(true)
+
+  const [whosDrinkTheNDoubleCola, setWhosDrinkTheNDoubleCola] = useState('')
+
+  const [howManyTimes, setHowManyTimes] = useState(0)
+  
+  const [stopedArray, setStopedArray] = useState([])
+  
+  const [stopedCount, setStopedCount] = useState()
+
+
+  const stopOrContinue = () => setStop(!stop)
+
+  const savingStopData = (queue, count) => {
+    setStopedArray(queue)
+    setStopedCount(count)
+  }
+
+  const whoIsNext = (queue, n) => {
+    for (let count = 0 || stopedCount; count < n; count++) { 
+      if(stop) {
+        savingStopData(queue, count)
+        break
+      }
+
+      setTimeout(() => {
+        queue = goTwoEnd(queue) 
+      }, 3000)
+
+      if(count === howManyTimes) {
+        setWhosDrinkTheNDoubleCola(queue[0])
+        setStop(true)
+        setStopedArray([])
+      }
+    }
+  }
+
+  useEffect(() => {
+    let queue = stopedArray || theBigBangTeamQueue
+
+    if(stop) return
+
+    if(!stop && !howManyTimes) return alert('Para iniciar el juego debe agregar un numero mayor a 0')
+
+    whoIsNext(queue, howManyTimes)
+
+  }, [stop])
+
+  useEffect(() => {
+    console.log(whosDrinkTheNDoubleCola)
+  }, [whosDrinkTheNDoubleCola])
+
+  return (
+    <div className="App">
+      <button onClick={stopOrContinue}>{stop ? 'Iniciar' : 'Parar'}</button>
+      <button onClick={() => setHowManyTimes(52)}>Da 52 veces</button>
+    </div>
+  )
+}
